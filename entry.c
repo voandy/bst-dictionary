@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <entry.h>
+#include <string.h>
+#include "entry.h"
 
 typedef enum {M, F} gender_t;
 typedef enum {Summer, Winter} season_t;
@@ -31,10 +32,19 @@ typedef struct entry_t {
 /**
 * reads a row of input and formats it
 * @param a string of comma seperate values
-* @return an entry as data_t
+* @return an entry_t*
 */
-entry_t read_line(char line[]){
+entry_t* read_row(char* row){
+  entry_t* entry = malloc(sizeof(entry_t));
+  char* token;
+  token = strtok(row, ",");
 
+  while(token != NULL){
+    printf("%s\n", token);
+    token = strtok(NULL, ",");
+  }
+
+  return entry;
 }
 
 void print_data(entry_t data){
