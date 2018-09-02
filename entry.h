@@ -12,5 +12,6 @@
 typedef struct entry_t entry_t;
 
 entry_t* read_row(char* row);
+void print_data(entry_t* data);
 
 #endif

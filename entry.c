@@ -7,8 +7,12 @@ typedef enum {M, F} gender_t;
 typedef enum {Summer, Winter} season_t;
 typedef enum {Gold, Silver, Bronze, NoMedal} medal_t;
 
+char* get_gender(gender_t gender);
+char* get_season(season_t season);
+char* get_medal(medal_t medal);
+
 struct entry_t {
-  int ID;
+  int id;
   char name[MAX_STR];
 
   gender_t gender;
@@ -30,9 +34,9 @@ struct entry_t {
 };
 
 /**
-* reads a row of input and formats it
+* creates an entry and reads a row of data into it
 * @param a string of comma seperate values
-* @return an entry_t*
+* @return a pointer to the newly read entry
 */
 entry_t* read_row(char* row){
   entry_t* entry = malloc(sizeof(entry_t));
@@ -40,7 +44,7 @@ entry_t* read_row(char* row){
   token = strtok(row, ",");
 
   // reads ID
-  entry->ID = atoi(token);
+  entry->id = atoi(token);
   token = strtok(NULL, ",");
 
   // reads name
@@ -48,10 +52,12 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // reads gender
-  if(strcmp(token, "M") == 0){
-    entry->gender = M;
-  } else {
-    entry->gender = F;
+  switch (token[0]) {
+    case 'M': entry->gender = M;
+    break;
+
+    case 'F': entry->gender = F;
+    break;
   }
   token = strtok(NULL, ",");
 
@@ -60,19 +66,11 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // reads height, 0 when no data is available
-  if(strcmp(token, NA) == 0){
-    entry->height = 0;
-  } else {
-    entry->height = atoi(token);
-  }
+  entry->height = atoi(token);
   token = strtok(NULL, ",");
 
   // read weight
-  if(strcmp(token, NA) == 0){
-    entry->weight = 0;
-  } else {
-      entry->weight = atoi(token);
-  }
+  entry->weight = atoi(token);
   token = strtok(NULL, ",");
 
   // read team
@@ -92,10 +90,12 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // read season
-  if(strcmp(token, "Summer") == 0){
-    entry->season = Summer;
-  } else {
-    entry->season = Winter;
+  switch (token[0]) {
+    case 'S': entry->season = Summer;
+    break;
+
+    case 'W': entry->season = Winter;
+    break;
   }
   token = strtok(NULL, ",");
 
@@ -121,9 +121,104 @@ entry_t* read_row(char* row){
   } else {
     entry->medal = NoMedal;
   }
+  switch (token[0]) {
+    case 'N': entry->medal = NoMedal;
+    break;
+
+    case 'G': entry->medal = Gold;
+    break;
+
+    case 'S': entry->medal = Silver;
+    break;
+
+    case 'B': entry->medal = Bronze;
+    break;
+  }
 
   return entry;
 }
 
-void print_data(entry_t data){
+// prints an entry
+void print_data(entry_t* data){
+  // print name and id
+  printf("%s −−> ID: %i ", data->name, data->id);
+
+  // print gender
+  printf("Sex: %s || ", get_gender(data->gender));
+
+  // print age
+  if(data->age == 0){
+    printf("Age: NA || ");
+  } else {
+    printf("Age: %i || ", data->age);
+  }
+
+  // print height
+  if(data->height == 0){
+    printf("Height: NA || ");
+  } else {
+    printf("Height: %i || ", data->height);
+  }
+
+  // print weight
+  if(data->weight == 0){
+    printf("Weight: NA || ");
+  } else {
+    printf("Weight: %i || ", data->weight);
+  }
+
+  // print team
+  printf("Team: %s || ", data->team);
+
+  // print noc
+  printf("NOC: %s || ", data->noc);
+
+  // print games
+  printf("Games: %s || ", data->games);
+
+  // print year
+  printf("Year: %i || ", data->year);
+
+  // print season
+  printf("Season: %s || ", get_season(data->season));
+
+  // print host city
+  printf("City: %s || ", data->host_city);
+
+  // print sport
+  printf("Sport: %s || ", data->sport);
+
+  // print event
+  printf("Event: %s || ", data->event);
+
+  // print medal
+  printf("Medal: %s || ", get_medal(data->medal));
+
+  printf("\n");
+}
+
+// returns the string associated with the enum value in gender_t
+char* get_gender(gender_t gender){
+  switch (gender) {
+    case M: return "M";
+    case F: return "F";
+  }
+}
+
+// returns the string associated with the enum value in season_t
+char* get_season(season_t season){
+  switch (season) {
+    case Summer: return "Summer";
+    case Winter: return "Winter";
+  }
+}
+
+// returns the string associated with the enum value in medal_t
+char* get_medal(medal_t medal){
+  switch (medal) {
+    case Gold: return "Gold";
+    case Silver: return "Silver";
+    case Bronze: return "Bronze";
+    case NoMedal: return "NA";
+  }
 }

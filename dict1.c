@@ -16,8 +16,8 @@ int main(int argc, char *argv[]){
 
   while (fgets(rows, MAX_LINE, data)){
     char* row = strdup(rows);
-    printf("%s\n", row);
     entry_t* entry = read_row(row);
+    print_data(entry);
     free(row);
     free(entry);
   }
