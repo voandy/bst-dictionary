@@ -21,4 +21,6 @@ int main(int argc, char *argv[]){
     free(row);
     free(entry);
   }
+
+  return 0;
 }

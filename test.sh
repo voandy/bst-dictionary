@@ -1,13 +1,13 @@
 # Simple Testing Script for Assignment 1 
-# 
+#
 # Builds program and tests for two simple cases.
-# 
+#
 # How to use:
 #	- Copy this file to the directory you're using to store your program.
 #	- If this file, once copied, can't be run using test.sh, you may need
 #		to run `chmod 777 test.sh` in your terminal window.
 #	- Compile your program as usual.
-#	- You can feel free to use this program for your own testing, we would 
+#	- You can feel free to use this program for your own testing, we would
 #		however recommend you ensure your program still executes on the original
 #		version of this file.
 #	- You may like to explain what you think the output should be using the echo
@@ -18,14 +18,14 @@
 #	some of your own to ensure your program is correct.
 #
 # NOTE2: This program will overwrite any file you have called exactly datafile,
-#	datafile2, keyfile, keyfile2, outputfile1_1, outputfile1_2, outputfile2_1, 
-#	outputfile2_2 stdout1_1, stdout1_2, stdout2_1, stdout2_2, e_stdout1, 
+#	datafile2, keyfile, keyfile2, outputfile1_1, outputfile1_2, outputfile2_1,
+#	outputfile2_2 stdout1_1, stdout1_2, stdout2_1, stdout2_2, e_stdout1,
 #	e_stdout2, e_outputfile1 or e_outputfile2.
 #
-# Written by Grady Fitzpatrick (Staff Number 110064, Student 575753) for 
+# Written by Grady Fitzpatrick (Staff Number 110064, Student 575753) for
 # COMP20003, Algorithms and Data Structures
 
-# Removes .o files and the dict programs, to make sure you're not 
+# Removes .o files and the dict programs, to make sure you're not
 # building something using old files.
 rm -f *.o dict1 dict2
 
@@ -89,7 +89,7 @@ dict2 datafile2 outputfile2_2 < keyfile2 > stdout2_2
 # Compare outputs to expected outputs.
 echo "Checking output against expected"
 echo "--------------------------------"
-# Check out  man diff  to see what this does! This part is entirely for your 
+# Check out  man diff  to see what this does! This part is entirely for your
 #	benefit, you should get "".
 echo "dict1 stdout comparison with expected - Test Case 1"
 diff --side-by-side --suppress-common-lines --minimal --report-identical-files --ignore-all-space stdout1_1 e_stdout1
