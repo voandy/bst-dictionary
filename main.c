@@ -5,19 +5,20 @@
 #include "record.h"
 
 struct bst_node* makedict(char *datafile);
+void find_key(struct bst_node* dictionary, char *key, FILE *file);
 
 int main(int argc, char *argv[]){
   char datafile[128];
   char outputfile[128];
   struct bst_node* dictionary;
-  struct record* result;
 
   strcpy(datafile, argv[1]);
   strcpy(outputfile, argv[2]);
 
   dictionary = makedict(datafile);
 
-  result = search(dictionary, "Sofiya Aleksandrovna Velikaya");
+  FILE *file = fopen(outputfile, "w");
+  find_key(dictionary, "Danijel Bajlo", file);
 
   free_tree(dictionary);
 
@@ -40,4 +41,22 @@ struct bst_node* makedict(char *datafile){
     free(row);
   }
   return dictionary;
+}
+
+/**
+* searches for a key in the provided bst and outputs record if found
+* @param a dictionary, a key to search for and a file to write to
+* @return NA
+*/
+void find_key(struct bst_node* dictionary, char *key, FILE *file){
+  struct record* result;
+  result = search(dictionary, key);
+
+  fprintf(file, "%s --> ", key);
+
+  if(result) {
+    write_result(file, result);
+  } else {
+    fprintf(file, "NOTFOUND\n");
+  }
 }

@@ -109,63 +109,63 @@ struct record* read_row(char* row){
   return record;
 }
 
-// prints data from a record
-void print_record(struct record* record){
+// writes the details of a single record to the outputfile
+void write_result(FILE *file, struct record* result){
   // print id
-  printf("ID: %i || ", record->id);
+  fprintf(file, "ID: %i || ", result->id);
 
   // print gender
-  printf("Sex: %s || ", get_gender(record->gender));
+  fprintf(file, "Sex: %s || ", get_gender(result->gender));
 
   // print age
-  if(record->age == 0){
-    printf("Age: NA || ");
+  if(result->age == 0){
+    fprintf(file, "Age: NA || ");
   } else {
-    printf("Age: %i || ", record->age);
+    fprintf(file, "Age: %i || ", result->age);
   }
 
   // print height
-  if(record->height == 0){
-    printf("Height: NA || ");
+  if(result->height == 0){
+    fprintf(file, "Height: NA || ");
   } else {
-    printf("Height: %i || ", record->height);
+    fprintf(file, "Height: %i || ", result->height);
   }
 
   // print weight
-  if(record->weight == 0){
-    printf("Weight: NA || ");
+  if(result->weight == 0){
+    fprintf(file, "Weight: NA || ");
   } else {
-    printf("Weight: %i || ", record->weight);
+    fprintf(file, "Weight: %i || ", result->weight);
   }
 
   // print team
-  printf("Team: %s || ", record->team);
+  fprintf(file, "Team: %s || ", result->team);
 
   // print noc
-  printf("NOC: %s || ", record->noc);
+  fprintf(file, "NOC: %s || ", result->noc);
 
   // print games
-  printf("Games: %s || ", record->games);
+  fprintf(file, "Games: %s || ", result->games);
 
   // print year
-  printf("Year: %i || ", record->year);
+  fprintf(file, "Year: %i || ", result->year);
 
   // print season
-  printf("Season: %s || ", get_season(record->season));
+  fprintf(file, "Season: %s || ", get_season(result->season));
 
   // print host city
-  printf("City: %s || ", record->host_city);
+  fprintf(file, "City: %s || ", result->host_city);
 
   // print sport
-  printf("Sport: %s || ", record->sport);
+  fprintf(file, "Sport: %s || ", result->sport);
 
   // print event
-  printf("Event: %s || ", record->event);
+  fprintf(file, "Event: %s || ", result->event);
 
   // print medal
-  printf("Medal: %s || ", get_medal(record->medal));
+  fprintf(file, "Medal: %s || ", get_medal(result->medal));
 
-  printf("\n");
+  fprintf(file, "\n");
 }
 
 // frees a record from memory

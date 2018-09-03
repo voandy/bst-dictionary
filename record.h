@@ -36,7 +36,7 @@ struct record {
 };
 
 struct record* read_row(char* row);
-void print_record(struct record *record);
+void write_result(FILE *file, struct record* result);
 void free_record(struct record *record);
 
 #endif
