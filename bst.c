@@ -4,10 +4,6 @@
 #include "record.h"
 #include "bst.h"
 
-struct bst_node* makedict(){
- return NULL;
-}
-
 /**
  * Inserts a new node into the right position
  * @param a pointer to a parent node and a pointer to the record
@@ -44,32 +40,38 @@ struct bst_node* insert(struct bst_node* parent, struct record* record){
   return parent;
 }
 
-// struct result search(bst_node* parent, char* key){
-//   int comp;
-//   int comp_count;
-//   struct result* result;
-//   bst **curr_location = &parent;
-//
-//   while(*curr_location){
-//     if(!curr_location){
-//       return NULL;
-//     }
-//
-//     comp = strcmp(key, (*curr_location)->key);
-//     comp_count++;
-//
-//     if(comp == 0){
-//       result.record = curr_location->record;
-//       result.comp_count = comp_count;
-//     } else if(cmp < 0){
-//       curr_location = &((*curr_location)->left);
-//     } else {
-//       curr_location = &((*curr_location)->right);
-//     }
-//   }
-//
-//   return result;
-// }
+struct record* search(struct bst_node* parent, char* key){
+  int comp;
+  int comp_count;
+  struct bst_node **curr_location = &parent;
+  struct bst_node **next_location;
+
+  comp_count = 0;
+  do {
+    comp = strcmp(key, (*curr_location)->key);
+    comp_count++;
+
+    if(comp < 0){
+      next_location = &((*curr_location)->left);
+    } else if(comp > 0) {
+      next_location = &((*curr_location)->right);
+    } else {
+      next_location = &((*curr_location)->equal);
+    }
+
+    if(*next_location){
+      curr_location = next_location;
+    }
+  } while(*next_location);
+
+  printf("%s --> %i\n", key, comp_count);
+
+  if(strcmp(key, (*curr_location)->key) == 0){
+    return (*curr_location)->record;
+  } else {
+    return NULL;
+  }
+}
 
 // frees a tree given the top node
 void free_tree(struct bst_node* parent){

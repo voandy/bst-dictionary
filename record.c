@@ -109,13 +109,11 @@ struct record* read_row(char* row){
   return record;
 }
 
-// prints name and id from a record
-void print_name_id(struct record* record){
-  printf("%s −−> ID: %i ", record->name, record->id);
-}
-
 // prints data from a record
 void print_record(struct record* record){
+  // print id
+  printf("ID: %i || ", record->id);
+
   // print gender
   printf("Sex: %s || ", get_gender(record->gender));
 

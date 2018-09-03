@@ -36,7 +36,6 @@ struct record {
 };
 
 struct record* read_row(char* row);
-void print_name_id(struct record* record);
 void print_record(struct record *record);
 void free_record(struct record *record);
 

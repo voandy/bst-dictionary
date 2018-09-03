@@ -9,13 +9,8 @@ struct bst_node {
   struct record *record;
 };
 
-struct result {
-  struct record* record;
-  int comp_count;
-};
-
-struct bst_node* makedict();
 struct bst_node* insert(struct bst_node* parent, struct record* record);
+struct record* search(struct bst_node* parent, char* key);
 void free_tree(struct bst_node* parent);
 
 #endif
