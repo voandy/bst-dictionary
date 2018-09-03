@@ -1,11 +1,11 @@
-dict1: main.o entry.o bst.o
-	gcc bin/dict1.o bin/entry.o bin/bst.o -o bin/dict1 -Wall -g
+dict1: main.o record.o bst.o
+	gcc bin/dict1.o bin/record.o bin/bst.o -o dict1 -Wall -g
 
-main.o: main.c entry.h bst.h
+main.o: main.c record.h bst.h
 	gcc main.c -o bin/dict1.o -c -Wall -g
 
-entry.o: entry.c entry.h
-	gcc entry.c -o bin/entry.o -c -Wall -g
+record.o: record.c record.h
+	gcc record.c -o bin/record.o -c -Wall -g
 
-bst.o: bst.c bst.h entry.h
+bst.o: bst.c bst.h record.h
 	gcc bst.c -o bin/bst.o -c -Wall -g

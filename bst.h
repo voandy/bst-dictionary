@@ -2,19 +2,20 @@
 #define BST_H
 
 struct bst_node {
-  struct bst_node *equal;
   struct bst_node *left;
   struct bst_node *right;
+  struct bst_node *equal;
   char *key;
-  struct entry *data;
+  struct record *record;
 };
 
-struct result_t {
-  struct entry* data;
+struct result {
+  struct record* record;
   int comp_count;
 };
 
 struct bst_node* makedict();
-struct bst_node* insert(struct bst_node* parent, struct entry* data);
+struct bst_node* insert(struct bst_node* parent, struct record* record);
+void free_tree(struct bst_node* parent);
 
 #endif

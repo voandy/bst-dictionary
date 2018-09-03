@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "bst.h"
-#include "entry.h"
+#include "record.h"
 
 int main(int argc, char *argv[]){
   char datafile[128];
@@ -11,21 +11,23 @@ int main(int argc, char *argv[]){
   strcpy(datafile, argv[1]);
   strcpy(outputfile, argv[2]);
 
-  FILE* data = fopen(datafile, "r");
+  FILE* record = fopen(datafile, "r");
   char rows[MAX_LINE];
 
   struct bst_node* dictionary;
   dictionary = makedict();
 
-  while (fgets(rows, MAX_LINE, data)){
+  while (fgets(rows, MAX_LINE, record)){
     char* row = strdup(rows);
-    struct entry* entry = read_row(row);
-    print_data(entry);
+    struct record* record = read_row(row);
 
-    dictionary = insert(dictionary, entry);
+    print_name_id(record);
+    dictionary = insert(dictionary, record);
 
     free(row);
   }
+
+  free_tree(dictionary);
 
   return 0;
 }

@@ -1,5 +1,5 @@
-#ifndef ENTRY_H
-#define ENTRY_H
+#ifndef record_H
+#define record_H
 
 #define NUM_FIELDS 16
 #define MAX_LINE 512
@@ -13,7 +13,7 @@ typedef enum {M, F} gender_t;
 typedef enum {Summer, Winter} season_t;
 typedef enum {Gold, Silver, Bronze, NoMedal} medal_t;
 
-struct entry {
+struct record {
   int id;
   char *name;
 
@@ -35,8 +35,9 @@ struct entry {
   medal_t medal;
 };
 
-struct entry* read_row(char* row);
-void print_data(struct entry *data);
-void free_entry(struct entry *entry);
+struct record* read_row(char* row);
+void print_name_id(struct record* record);
+void print_record(struct record *record);
+void free_record(struct record *record);
 
 #endif
