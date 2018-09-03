@@ -1,5 +1,5 @@
-#ifndef record_H
-#define record_H
+#ifndef RECORD_H
+#define RECORD_H
 
 #define NUM_FIELDS 16
 #define MAX_LINE 512

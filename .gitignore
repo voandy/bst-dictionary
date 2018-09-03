@@ -63,3 +63,7 @@ dkms.conf
 # Data
 /data
 /bin
+
+# Executables
+dict1
+dict2
