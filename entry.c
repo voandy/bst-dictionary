@@ -3,43 +3,17 @@
 #include <string.h>
 #include "entry.h"
 
-typedef enum {M, F} gender_t;
-typedef enum {Summer, Winter} season_t;
-typedef enum {Gold, Silver, Bronze, NoMedal} medal_t;
-
 char* get_gender(gender_t gender);
 char* get_season(season_t season);
 char* get_medal(medal_t medal);
-
-struct entry_t {
-  int id;
-  char name[MAX_STR];
-
-  gender_t gender;
-  int age;
-  int height;
-  int weight;
-
-  char team[MAX_STR];
-  char noc[NOC_LEN];
-
-  char games[MAX_STR];
-  int year;
-  season_t season;
-  char host_city[128];
-
-  char sport[128];
-  char event[128];
-  medal_t medal;
-};
 
 /**
 * creates an entry and reads a row of data into it
 * @param a string of comma seperate values
 * @return a pointer to the newly read entry
 */
-entry_t* read_row(char* row){
-  entry_t* entry = malloc(sizeof(entry_t));
+struct entry* read_row(char* row){
+  struct entry* entry = malloc(sizeof(struct entry));
   char* token;
   token = strtok(row, ",");
 
@@ -48,6 +22,7 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // reads name
+  entry->name = (char *) malloc(strlen(token) * sizeof(char) + 1);
   strcpy(entry->name, token);
   token = strtok(NULL, ",");
 
@@ -74,6 +49,7 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // read team
+  entry->team = (char *) malloc(strlen(token) * sizeof(char) + 1);
   strcpy(entry->team, token);
   token = strtok(NULL, ",");
 
@@ -82,6 +58,7 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // read games
+  entry->games = (char *) malloc(strlen(token) * sizeof(char) + 1);
   strcpy(entry->games, token);
   token = strtok(NULL, ",");
 
@@ -100,27 +77,21 @@ entry_t* read_row(char* row){
   token = strtok(NULL, ",");
 
   // read host host_city
+  entry->host_city = (char *) malloc(strlen(token) * sizeof(char) + 1);
   strcpy(entry->host_city, token);
   token = strtok(NULL, ",");
 
   // read sport
+  entry->sport = (char *) malloc(strlen(token) * sizeof(char) + 1);
   strcpy(entry->sport, token);
   token = strtok(NULL, ",");
 
   // read event
+  entry->event = (char *) malloc(strlen(token) * sizeof(char) + 1);
   strcpy(entry->event, token);
   token = strtok(NULL, ",");
 
   // read medal
-  if(strcmp(token, "Gold") == 0){
-    entry->medal = Gold;
-  } else if(strcmp(token, "Silver") == 0) {
-    entry->medal = Silver;
-  } else if(strcmp(token, "Bronze") == 0) {
-    entry->medal = Bronze;
-  } else {
-    entry->medal = NoMedal;
-  }
   switch (token[0]) {
     case 'N': entry->medal = NoMedal;
     break;
@@ -139,7 +110,7 @@ entry_t* read_row(char* row){
 }
 
 // prints an entry
-void print_data(entry_t* data){
+void print_data(struct entry* data){
   // print name and id
   printf("%s −−> ID: %i ", data->name, data->id);
 
@@ -197,11 +168,22 @@ void print_data(entry_t* data){
   printf("\n");
 }
 
+void free_entry(struct entry *entry){
+  free(entry->name);
+  free(entry->team);
+  free(entry->games);
+  free(entry->host_city);
+  free(entry->sport);
+  free(entry->event);
+  free(entry);
+}
+
 // returns the string associated with the enum value in gender_t
 char* get_gender(gender_t gender){
   switch (gender) {
     case M: return "M";
     case F: return "F";
+    default: exit(EXIT_FAILURE);
   }
 }
 
@@ -210,6 +192,7 @@ char* get_season(season_t season){
   switch (season) {
     case Summer: return "Summer";
     case Winter: return "Winter";
+    default: exit(EXIT_FAILURE);
   }
 }
 
@@ -220,5 +203,6 @@ char* get_medal(medal_t medal){
     case Silver: return "Silver";
     case Bronze: return "Bronze";
     case NoMedal: return "NA";
+    default: exit(EXIT_FAILURE);
   }
 }
