@@ -1,1 +1,74 @@
-Danijel Bajlo --> ID: 6974 || Sex: M || Age: 23 || Height: NA || Weight: NA || Team: Croatia || NOC: CRO || Games: 1996 Summer || Year: 1996 || Season: Summer || City: Atlanta || Sport: Rowing || Event: Rowing Men's Double Sculls || Medal: NA || 
+Sofiya Aleksandrovna Velikaya --> ID: 125779 || Sex: F || Age: 23 || Height: 175 || Weight: 70 || Team: Russia || NOC: RUS || Games: 2008 Summer || Year: 2008 || Season: Summer || City: Beijing || Sport: Fencing || Event: Fencing Women's Sabre Individual || Medal: NA || 
+
+Sofiya Aleksandrovna Velikaya --> ID: 125779 || Sex: F || Age: 31 || Height: 175 || Weight: 70 || Team: Russia || NOC: RUS || Games: 2016 Summer || Year: 2016 || Season: Summer || City: Rio de Janeiro || Sport: Fencing || Event: Fencing Women's Sabre Team || Medal: Gold || 
+
+Sofiya Aleksandrovna Velikaya --> ID: 125779 || Sex: F || Age: 23 || Height: 175 || Weight: 70 || Team: Russia || NOC: RUS || Games: 2008 Summer || Year: 2008 || Season: Summer || City: Beijing || Sport: Fencing || Event: Fencing Women's Sabre Team || Medal: NA || 
+
+Sofiya Aleksandrovna Velikaya --> ID: 125779 || Sex: F || Age: 31 || Height: 175 || Weight: 70 || Team: Russia || NOC: RUS || Games: 2016 Summer || Year: 2016 || Season: Summer || City: Rio de Janeiro || Sport: Fencing || Event: Fencing Women's Sabre Individual || Medal: Silver || 
+
+Sofiya Aleksandrovna Velikaya --> ID: 125779 || Sex: F || Age: 27 || Height: 175 || Weight: 70 || Team: Russia || NOC: RUS || Games: 2012 Summer || Year: 2012 || Season: Summer || City: London || Sport: Fencing || Event: Fencing Women's Sabre Individual || Medal: Silver || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Horse Vault || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Rings || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Floor Exercise || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Individual All-Around || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Pommelled Horse || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Rings || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Parallel Bars || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Pommelled Horse || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Individual All-Around || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Parallel Bars || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Floor Exercise || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Team All-Around || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Horizontal Bar || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Team All-Around || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 32 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1952 Summer || Year: 1952 || Season: Summer || City: Helsinki || Sport: Gymnastics || Event: Gymnastics Men's Horizontal Bar || Medal: NA || 
+
+Jakob Kiefer --> ID: 59587 || Sex: M || Age: 36 || Height: NA || Weight: NA || Team: Germany || NOC: GER || Games: 1956 Summer || Year: 1956 || Season: Summer || City: Melbourne || Sport: Gymnastics || Event: Gymnastics Men's Horse Vault || Medal: NA || 
+
+Lyndon Sheehan --> ID: 109454 || Sex: M || Age: 25 || Height: 179 || Weight: 83 || Team: New Zealand || NOC: NZL || Games: 2014 Winter || Year: 2014 || Season: Winter || City: Sochi || Sport: Freestyle Skiing || Event: Freestyle Skiing Men's Halfpipe || Medal: NA || 
+
+Nir Lipo --> NOTFOUND
+
+Rika Komazawa --> ID: 62325 || Sex: F || Age: 26 || Height: 161 || Weight: 55 || Team: Japan || NOC: JPN || Games: 2008 Summer || Year: 2008 || Season: Summer || City: Beijing || Sport: Hockey || Event: Hockey Women's Hockey || Medal: NA || 
+
+Rika Komazawa --> ID: 62325 || Sex: F || Age: 30 || Height: 161 || Weight: 55 || Team: Japan || NOC: JPN || Games: 2012 Summer || Year: 2012 || Season: Summer || City: London || Sport: Hockey || Event: Hockey Women's Hockey || Medal: NA || 
+
+Rika Komazawa --> ID: 62325 || Sex: F || Age: 22 || Height: 161 || Weight: 55 || Team: Japan || NOC: JPN || Games: 2004 Summer || Year: 2004 || Season: Summer || City: Athina || Sport: Hockey || Event: Hockey Women's Hockey || Medal: NA || 
+
+Marian Dumitru --> ID: 30580 || Sex: M || Age: 20 || Height: 196 || Weight: 95 || Team: Romania || NOC: ROU || Games: 1980 Summer || Year: 1980 || Season: Summer || City: Moskva || Sport: Handball || Event: Handball Men's Handball || Medal: Bronze || 
+
+Marian Dumitru --> ID: 30580 || Sex: M || Age: 32 || Height: 196 || Weight: 95 || Team: Romania || NOC: ROU || Games: 1992 Summer || Year: 1992 || Season: Summer || City: Barcelona || Sport: Handball || Event: Handball Men's Handball || Medal: NA || 
+
+Marian Dumitru --> ID: 30580 || Sex: M || Age: 24 || Height: 196 || Weight: 95 || Team: Romania || NOC: ROU || Games: 1984 Summer || Year: 1984 || Season: Summer || City: Los Angeles || Sport: Handball || Event: Handball Men's Handball || Medal: Bronze || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 22 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 1996 Summer || Year: 1996 || Season: Summer || City: Atlanta || Sport: Swimming || Event: Swimming Men's 400 metres Individual Medley || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 27 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 2000 Summer || Year: 2000 || Season: Summer || City: Sydney || Sport: Swimming || Event: Swimming Men's 400 metres Individual Medley || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 18 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 1992 Summer || Year: 1992 || Season: Summer || City: Barcelona || Sport: Swimming || Event: Swimming Men's 400 metres Individual Medley || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 22 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 1996 Summer || Year: 1996 || Season: Summer || City: Atlanta || Sport: Swimming || Event: Swimming Men's 4 x 100 metres Freestyle Relay || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 27 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 2000 Summer || Year: 2000 || Season: Summer || City: Sydney || Sport: Swimming || Event: Swimming Men's 200 metres Individual Medley || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 22 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 1996 Summer || Year: 1996 || Season: Summer || City: Atlanta || Sport: Swimming || Event: Swimming Men's 200 metres Individual Medley || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 18 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 1992 Summer || Year: 1992 || Season: Summer || City: Barcelona || Sport: Swimming || Event: Swimming Men's 200 metres Individual Medley || Medal: NA || 
+
+Matthew Stephen Dunn --> ID: 30686 || Sex: M || Age: 22 || Height: 184 || Weight: 84 || Team: Australia || NOC: AUS || Games: 1996 Summer || Year: 1996 || Season: Summer || City: Atlanta || Sport: Swimming || Event: Swimming Men's 4 x 200 metres Freestyle Relay || Medal: NA || 
+

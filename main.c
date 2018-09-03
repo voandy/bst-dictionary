@@ -4,59 +4,55 @@
 #include "bst.h"
 #include "record.h"
 
-struct bst_node* makedict(char *datafile);
-void find_key(struct bst_node* dictionary, char *key, FILE *file);
+struct bst_node *makedict(char *datafile);
 
 int main(int argc, char *argv[]){
-  char datafile[128];
-  char outputfile[128];
-  struct bst_node* dictionary;
+  char datafile[MAX_STR];
+  char outputfile[MAX_STR];
+  char key[MAX_STR];
+  struct bst_node *dictionary;
 
+  // read in input and output file names
   strcpy(datafile, argv[1]);
   strcpy(outputfile, argv[2]);
 
+  // populate dictionary using input file
   dictionary = makedict(datafile);
 
+  // open output files
   FILE *file = fopen(outputfile, "w");
-  find_key(dictionary, "Danijel Bajlo", file);
 
+  // search for keys in dictionary
+  while (fgets(key, MAX_STR, stdin) != NULL){
+    // removes the line break from key if present
+    if(key[strlen(key) - 1] == '\n'){
+      key[strlen(key) - 1] = '\0';
+    }
+    // searchs for and outputs keys
+    search(dictionary, key, file);
+  }
+
+  // frees the dictionary
   free_tree(dictionary);
-
   return 0;
 }
 
-// given the filename of an input file, populates a BST with data in file
-struct bst_node* makedict(char *datafile){
+// given the filename of an input file, populates a BST with data from file
+struct bst_node * makedict(char *datafile){
   FILE *file = fopen(datafile, "r");
   char rows[MAX_LINE];
 
-  struct bst_node* dictionary = NULL;
+  struct bst_node *dictionary = NULL;
 
+  // grabs each row frin the file and coverts it to a record
   while (fgets(rows, MAX_LINE, file)){
     char* row = strdup(rows);
-    struct record* record = read_row(row);
+    struct record *record = read_row(row);
 
+    // inserts the record into dictionary
     dictionary = insert(dictionary, record);
 
     free(row);
   }
   return dictionary;
-}
-
-/**
-* searches for a key in the provided bst and outputs record if found
-* @param a dictionary, a key to search for and a file to write to
-* @return NA
-*/
-void find_key(struct bst_node* dictionary, char *key, FILE *file){
-  struct record* result;
-  result = search(dictionary, key);
-
-  fprintf(file, "%s --> ", key);
-
-  if(result) {
-    write_result(file, result);
-  } else {
-    fprintf(file, "NOTFOUND\n");
-  }
 }

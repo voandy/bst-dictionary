@@ -35,7 +35,7 @@ struct record {
   medal_t medal;
 };
 
-struct record* read_row(char* row);
+struct record * read_row(char* row);
 void write_result(FILE *file, struct record* result);
 void free_record(struct record *record);
 

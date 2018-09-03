@@ -6,10 +6,10 @@
 
 /**
  * Inserts a new node into the right position
- * @param a pointer to a parent node and a pointer to the record
+ * @param a pointer to a bst and a pointer to the record
  * @return a pointer to the complete bst with a new child inserted
  */
-struct bst_node* insert(struct bst_node* parent, struct record* record){
+struct bst_node * insert(struct bst_node *parent, struct record *record){
   char *key = record->name;
   struct bst_node **insert_location = &parent;
 
@@ -40,13 +40,17 @@ struct bst_node* insert(struct bst_node* parent, struct record* record){
   return parent;
 }
 
-struct record* search(struct bst_node* parent, char* key){
+/**
+* searches the given bst for a key printing any and all record with matching
+* keys (if any)
+* @param a bst, a key and a file to write to
+*/
+void search(struct bst_node *parent, char *key, FILE *file){
   int comp;
-  int comp_count;
+  int comp_count = 0;
   struct bst_node **curr_location = &parent;
   struct bst_node **next_location;
 
-  comp_count = 0;
   do {
     comp = strcmp(key, (*curr_location)->key);
     comp_count++;
@@ -57,28 +61,35 @@ struct record* search(struct bst_node* parent, char* key){
       next_location = &((*curr_location)->right);
     } else {
       next_location = &((*curr_location)->equal);
+
+      // output record to file when a match is found but continue search
+      fprintf(file, "%s --> ", key);
+      write_result(file, (*curr_location)->record);
+      fprintf(file, "\n");
     }
 
+    // iterate until leaf node is reached
     if(*next_location){
       curr_location = next_location;
     }
   } while(*next_location);
 
+  // print name and number of comparisons to stdout
   printf("%s --> %i\n", key, comp_count);
 
-  if(strcmp(key, (*curr_location)->key) == 0){
-    return (*curr_location)->record;
-  } else {
-    return NULL;
+  // output NOTFOUND to file if no match is found
+  if(strcmp(key, (*curr_location)->key) != 0){
+    fprintf(file, "%s --> NOTFOUND\n\n", key);
   }
 }
 
 // frees a tree given the top node
-void free_tree(struct bst_node* parent){
+void free_tree(struct bst_node *parent){
   if(!parent){
     return;
   }
 
+  // postorder traversal
   free_tree(parent->left);
   free_tree(parent->equal);
   free_tree(parent->right);

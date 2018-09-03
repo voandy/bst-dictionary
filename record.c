@@ -12,8 +12,8 @@ char* get_medal(medal_t medal);
 * @param a string of comma seperate values
 * @return a pointer to the newly created and read record
 */
-struct record* read_row(char* row){
-  struct record* record = malloc(sizeof(struct record));
+struct record * read_row(char* row){
+  struct record *record = malloc(sizeof(struct record));
   char* token;
   token = strtok(row, ",");
 
@@ -110,7 +110,7 @@ struct record* read_row(char* row){
 }
 
 // writes the details of a single record to the outputfile
-void write_result(FILE *file, struct record* result){
+void write_result(FILE *file, struct record *result){
   // print id
   fprintf(file, "ID: %i || ", result->id);
 
